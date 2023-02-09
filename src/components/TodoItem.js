@@ -1,8 +1,10 @@
 import React from 'react'
 
-const TodoItem = () => {
+const TodoItem = ({todo}) => {
   return (
-    <div>TodoItem</div>
+    <div>
+        {}
+    </div>
   )
 }
 

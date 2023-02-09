@@ -1,24 +1,22 @@
-import React from 'react'
+// import React from 'react'
 
-import { useDispatch } from 'react-redux'
-import { removeTodo } from './todoSlice'
+// import { useDispatch } from 'react-redux'
+// import { removeTodo } from './todoSlice'
 
+// const TodoItem = ({todo}) => {
 
+//   const dispatch = useDispatch()
 
-const TodoItem = ({todo}) => {
+//   const removeHandlerTodo=(id)=>{
+//     dispatch(removeTodo(id))
+//   }
+//   return (
+//     <div>
+//         {todo.text}
 
-  const dispatch = useDispatch()
+//       <button onClick={()=>removeHandlerTodo(todo.id)}>Delete</button>
+//     </div>
+//   )
+// }
 
-  const removeHandlerTodo=(id)=>{
-    dispatch(removeTodo(id))
-  }
-  return (
-    <div>
-        {todo.text}
-
-      <button onClick={()=>removeHandlerTodo(todo.id)}>Delete</button>
-    </div>
-  )
-}
-
-// export default TodoItem
+// // export default TodoItem
