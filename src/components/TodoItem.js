@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { removeTodo } from './todoSlice'
 
 
-const TodoItem = () => {
+const TodoItem = ({todo}) => {
 
     const dispatch = useDispatch()
 
