@@ -11,7 +11,10 @@ const TodoItem = () => {
         dispatch(removeTodo(todo))
     }
   return (
-    <div>TodoItem</div>
+    <div>
+        {todo.text}
+        <button onClick={()=>removeHandlerTodo(todo.id)}>Delete</button>
+    </div>
   )
 }
 
