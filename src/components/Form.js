@@ -6,8 +6,8 @@ const Form = ({todo}) => {
     const [value,setValue]=useState('')
      const dispatch =useDispatch()
 
-     const addTodo = ()=>{
-        const addHandlerTodo = {
+     const addHandlerTodo = ()=>{
+        const todo = {
             id:Math.random(),
             text: value,
         }
@@ -21,7 +21,7 @@ const Form = ({todo}) => {
       value={value}
       onChange={(e=>setValue(e.target.value))}
       />
-      <button>Add</button>
+      <button onClick={()=>addHandlerTodo}>Add</button>
     </div>
   )
 }
