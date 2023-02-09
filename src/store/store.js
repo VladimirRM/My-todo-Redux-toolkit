@@ -2,5 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import todoSlice from "../components/todoSlice";
 
 export const store = configureStore({
-    todo:todoSlice
-})
+  reducer: {
+    todo: todoSlice,
+  },
+});
