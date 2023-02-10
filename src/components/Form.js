@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "./TodoItem";
+import { addTodo } from "./todoSlice";
 
 const Form = () => {
   const [value, setValue] = useState("");
@@ -22,7 +22,7 @@ const Form = () => {
         onChange={(e) => setValue(e.target.value)}
         value={value}
       />
-      <button opnClick={()=>addTodoHandler()}>Add todo</button>
+      <button onClick={() => addTodoHandler()}>Add todo</button>
     </div>
   );
 };

@@ -1,19 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { removeTodo } from "./todoSlice";
 
-const initialState = {
-  todos: [],
+const TodoItem = ({ todo }) => {
+  const dispatch = useDispatch();
+
+  const removeTodoHandler = (id) => {
+    dispatch(removeTodo(id));
+  };
+  return (
+    <div>
+      {todo.text}
+      <button onClick={() => removeTodoHandler(todo.id)}>Delete</button>
+    </div>
+  );
 };
-const todoSlice = createSlice({
-  name: "todos",
-  initialState,
-  reducers: {
-    addTodo: (state, action) => {
-      state.todos.push(action.payload);
-    },
-    removeTodo: (state, action) => {
-      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
-    },
-  },
-});
-export const { addTodo, removeTodo } = todoSlice.actions;
-export default todoSlice.reducer;
+
+export default TodoItem;
