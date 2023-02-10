@@ -1,32 +1,30 @@
-import React,{useState} from 'react'
-import { addTodo } from './todoSlice'
-import { useDispatch } from 'react-redux'
-
+import React, { useState } from "react";
+import { addTodo } from "./todoSlice";
+import { useDispatch } from "react-redux";
 
 const Form = () => {
-    const dispatch = useDispatch()
-    const {value,setValue}= useState('')
+  const dispatch = useDispatch();
+  const { value, setValue } = useState("");
 
-    const addTodoHandler = ()=>{
-        const todo = {
-            id:Math.random(),
-            text: value,
-        } 
-        dispatch(addTodo(todo))
-        setValue('')
-
-    }
-       
+  const addTodoHandler = () => {
+    const todo = {
+      id: Math.random(),
+      text: value,
+    };
+    dispatch(addTodo(todo));
+    setValue("");
+  };
 
   return (
     <div>
-
-        <input type="text"
-        
-        
-        onChange={}/>
+      <input
+        type="text"
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+        />
+        <button onClick={()=>addTodoHandler()}>Add</button>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
