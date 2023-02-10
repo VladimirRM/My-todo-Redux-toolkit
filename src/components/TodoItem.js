@@ -13,7 +13,7 @@ const TodoItem = ({todo}) => {
     <div>
 
         {todo.text}
-        <button onClick={()=>removeTodoHandler()}>Delete</button>
+        <button onClick={()=>removeTodoHandler(todo.id)}>Delete</button>
     </div>
   )
 }

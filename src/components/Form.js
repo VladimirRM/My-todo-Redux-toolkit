@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 
 const Form = () => {
   const dispatch = useDispatch();
-  const { value, setValue } = useState("");
+  const [value, setValue ]  = useState("");
 
   const addTodoHandler = () => {
     const todo = {
