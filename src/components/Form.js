@@ -13,7 +13,8 @@ const Form = () => {
             text: value,
         } 
         dispatch(addTodo(todo))
-        
+        setValue('')
+
     }
        
 
